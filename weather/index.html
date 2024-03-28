@@ -4,8 +4,312 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/32d93a9699.js" crossorigin="anonymous"></script>
+    <style>
+        html,body{
+            height:100%;
+            margin:0px;
+
+        }
+        body{
+            background-color:rgb(41, 36, 36);
+            /* height:100%; */
+            display:flex;
+
+        }
+
+        .leftcontainer{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-items:flex-start; 
+            width: 5%;
+            height:97%;
+            background-color:rgb(53, 53, 49);
+            /* z-index:1;     */
+            border-radius: 25px;
+            color:white;
+            margin:20px;
+        }
+
+           .lefticonscontainer{
+            /* margin-top:50px; */
+            display:flex;
+            width: 100%;
+            height:100%;
+            justify-content:center;
+            align-items:flex-start;
+            /* background-color:blue; */
+            }
+
+            .lefticons{
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            flex-direction:column;
+            height: 50%;
+            font-size:20px;
+            color:rgb(123, 115, 115)
+            }
+
+            /* .lefticons>i{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+
+
+            } */
+            .lefticons>i:hover {
+            color: white;
+            }   
+
+.lefticons>i:hover::before {
+    content: attr(title);
+    color: white;
+    font-size: 10px;
+}
+
+.rightcontainer{
+height: 100%;
+width:60%;
+justify-content:flex-end;
+display: flex;
+/* background-color:blue; */
+flex-direction:column;
+border-radius:25px;
+margin-left:20px;
+margin-right:20px;
+margin-top:20px;
+}
+
+.rightcontainer form {
+    display:flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width:100%;
+    height:10%;
+    /* background-color: yellow; */
+}
+
+.rightcontainer form input[type="search"]{
+    width:100%;
+    border-radius:25px;
+    background-color:rgb(53, 53, 49);
+    color:white;
+    border:none;
+    height:100%;
+}
+
+.rightcontainer form input[type="search"]::placeholder {
+    padding: 20px;
+}
+
+
+        .rightbottom{
+            display:flex;
+            width:100%;
+            background-color:rgb(53, 53, 49);
+            height:30%;
+            margin-bottom:20px;
+            border-radius:25px;
+        }    
+        
+        .upperright{
+            display:flex;
+            width:100%;
+            background-color:rgb(53, 53, 49);
+            height:30%;
+            margin-bottom:20px;
+            border-radius:25px;
+        }
+
+       
+
+        .endcontainer{
+            width: 40%;
+            height:100%;
+            /* background-color:yellow; */
+            margin:20px;
+        }
+        .endcon{
+            display:flex;
+            width:100%;
+            height:97%;
+            border-radius:25px;
+            background-color:rgb(53, 53, 49);
+            margin-bottom: 20px;
+            align-items:flex-start;
+            justify-content:flex-start;
+            color:white;
+            flex-direction:column;
+        }
+
+        .endcon p{
+            padding:20px; 
+        }
+        
+        .endicon{
+            display:flex;
+            border-bottom: dotted white 2px;
+            /* background-color:blue; */
+            height:12.4%;
+            width:90%;
+            margin-left:30px;
+            justify-content:space-evenly;
+            align-items:center;
+        }
+
+        .endicon i{
+            color:yellow;
+        
+        }
+
+        /* .endicon:nth-child(7){
+            border:none;
+        } */
+
+        .info{
+            display:flex;
+            /* justify-content:flex-start; 
+            align-items:flex-start; */
+            color:white;
+            flex-direction:row;
+        }
+
+        .first{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* background-color: yellow; */
+            width:50%;
+            padding:10px;
+        }
+
+        .second {
+            display:flex;
+            font-size:9rem;
+            justify-content:center;
+            align-items:center;
+            width:50%;
+            height:100%;
+            /* background-color: blue; */
+            color:orange;
+        }
+
+        .rightbottom{
+            display:flex;
+            justify-content:flex-start;
+            align-items:flex-start;
+            flex-direction: column;
+        }
+
+        .text{
+            color:white;
+            width:100%;
+            height:30%;
+            padding-top: 30px;
+            padding-left:10px;
+        }
+
+        .timeicons{
+            display:flex;
+            justify-content: space-evenly;
+            align-items:center;
+            width: 100%;
+            height:100%;
+            
+        }
+
+        .time{
+            display:flex;
+            border-right: dotted white 3px;
+            /* background-color:blue; */
+            width:80%;
+            height:100%;
+            justify-content: center;
+            align-items:center;
+            font-size:5rem;
+            color:grey;
+
+        }
+        
+    </style>
 </head>
 <body>
-    weather app
+    <div class="leftcontainer">
+        <i class="fa-solid fa-wind" style="color:rgb(156, 227, 247);padding:25px;
+        font-size: 25px;"></i>
+        <div class="lefticonscontainer">
+            <div class="lefticons">
+                <i class="fa-solid fa-cloud-sun" title="Weather"></i>
+                <i class="fa-solid fa-bars" title="Cities"></i>
+                <i class="fa-solid fa-map-location-dot" title="Maps"></i>
+                <i class="fa-solid fa-gears" title="Settings"></i>
+                <i class="fa-solid fa-user" title="Profile"></i>
+            </div>
+        </div>
+        </div>
+
+        <div class="rightcontainer">
+            <form action="" >
+                <input type="Search" placeholder="Search for cities">
+            </form>
+            <div class="info">
+                <div class="first">
+                     <h1>Nashik<i class="fa-solid fa-location-dot"></i>
+                        <h6>Chances of rain:10%</h6></h1>
+                    <h1>31deg</h1>
+                </div>
+
+            <div class="second">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+               
+                
+            </div>
+            <div class="rightbottom">
+                <div class="text"> TODAYS'S FORECAST
+                </div>
+                <div class="timeicons"> 
+                <div class="time"><h6>6 AM</h6><i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>9 AM</h6><i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>12 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>3 PM</h16<i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>6 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>9 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
+                </div>
+               
+            </div>
+            <div class="upperright">
+            </div>
+        </div>
+
+        <div class="endcontainer">
+                <div class="endcon">
+                    <p>7-day forecast</p>
+                    <div class="endicon">
+                        <p>Monday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p>
+                    </div>
+                    <div class="endicon"><p>Tuesday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p></div>
+                    <div class="endicon"><p>Wednesday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p></div>
+                    <div class="endicon"><p>Thursday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p></div>
+                    <div class="endicon"><p>Friday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p></div>
+                    <div class="endicon"><p>Saturday</p>   
+                        <i class="fa-solid fa-sun"></i> Sunny
+                        <p>22/11/2024</p></div>
+                    
+                </div>
+        </div>
+        
 </body>
 </html>
