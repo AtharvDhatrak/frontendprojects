@@ -24,7 +24,7 @@
             align-items:center;
             justify-items:flex-start; 
             width: 5%;
-            height:97%;
+            height:95%;
             background-color:rgb(53, 53, 49);
             /* z-index:1;     */
             border-radius: 25px;
@@ -70,7 +70,7 @@
 }
 
 .rightcontainer{
-height: 100%;
+height: 97%;
 width:60%;
 justify-content:flex-end;
 display: flex;
@@ -82,12 +82,12 @@ margin-right:20px;
 margin-top:20px;
 }
 
-.rightcontainer form {
+.rightcontainer>form {
     display:flex;
     justify-content:flex-start;
     align-items: flex-start;
     width:100%;
-    height:10%;
+    height:30%;
     /* background-color: yellow; */
 }
 
@@ -127,7 +127,7 @@ margin-top:20px;
 
         .endcontainer{
             width: 40%;
-            height:100%;
+            height:97%;
             /* background-color:yellow; */
             margin:20px;
         }
@@ -220,18 +220,138 @@ margin-top:20px;
             
         }
 
-        .time{
+        .time h6{
             display:flex;
-            border-right: dotted white 3px;
             /* background-color:blue; */
             width:80%;
             height:100%;
-            justify-content: center;
-            align-items:center;
-            font-size:5rem;
-            color:grey;
+            font-size:1rem;
+            color:white;
 
         }
+        .time{
+            display:flex;
+            justify-content: space-evenly;
+            align-items:center;
+            border-right: dotted white 3px;
+            color:gray;
+            width:80%;
+            height:100%;
+            flex-direction: column;
+
+        }
+
+        .time >i{
+            display:flex;
+            padding:none;
+            font-size:3rem;
+            color:rgb(153, 239, 250);
+        }
+           
+        .time:nth-child(6)
+        {
+            border:none;
+        }
+        
+        .urm{
+            width:100%;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-evenly;
+            align-items: space-evenly;
+            color:white;
+            }
+
+            .upperright{
+                height:100%;
+                display:flex;
+                flex-direction:column;
+            justify-content:flex-start;
+            align-items: flex-start;
+            color:white;
+            }
+        
+            
+        .upperrightfirst{
+            display:flex;
+            width:33%;
+            padding:10px;
+            justify-content:flex-start;
+            align-items:flex-start;
+            flex-direction:column;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .upperrightsecond{
+            display:flex;
+            width:33%;
+            padding:10px;
+            justify-content:flex-start;
+            align-items:flex-start;
+            flex-direction:column;
+
+        }
+
+        button{
+            background-color: rgb(45, 143, 254);
+            border-radius:20px;
+            border:none;
+        }
+
+        @media screen and (max-width:1000px)
+        {
+            body,html{
+                flex-direction: column;
+                align-items:flex-start;
+                justify-content:flex-start;
+            }
+
+            .leftcontainer{
+                flex-direction:row;
+                width:95%;
+                height:10%;
+                padding:none;
+            }
+
+            .lefticonscontainer{
+                width:97%;
+                flex-direction:row;
+                justify-content:flex-end;
+                align-items:center;
+            
+            }
+
+           
+            .timeicons{
+                overflow:hidden;
+            }
+            
+            .time{
+                overflow:hidden;
+            }
+
+            .time>i{
+                font-size:40px;
+            }
+                .lefticons{
+                    flex-direction:row;
+                    justify-content:space-evenly;
+                    align-items:center;
+                }
+
+                .lefticons>i{
+                    padding:10px;
+                }
+
+                .rightcontainer , .endcontainer{
+                    width: 95%;
+                }
+
+                .upperright{
+                    overflow:hidden;
+                }
+
+        }
+
         
     </style>
 </head>
@@ -251,13 +371,13 @@ margin-top:20px;
         </div>
 
         <div class="rightcontainer">
-            <form action="" >
+            <!-- <form action="" >
                 <input type="Search" placeholder="Search for cities">
-            </form>
+            </form> -->
             <div class="info">
+               
                 <div class="first">
-                     <h1>Nashik<i class="fa-solid fa-location-dot"></i>
-                        <h6>Chances of rain:10%</h6></h1>
+                     <h1>Nashik<i class="fa-solid fa-location-dot"></i><br><h6>Chances of rain:10%</h6></h1>
                     <h1>31deg</h1>
                 </div>
 
@@ -274,13 +394,28 @@ margin-top:20px;
                 <div class="time"><h6>6 AM</h6><i class="fa-brands fa-cloudflare"></i></div>
                 <div class="time"><h6>9 AM</h6><i class="fa-brands fa-cloudflare"></i></div>
                 <div class="time"><h6>12 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
-                <div class="time"><h6>3 PM</h16<i class="fa-brands fa-cloudflare"></i></div>
+                <div class="time"><h6>3 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
                 <div class="time"><h6>6 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
                 <div class="time"><h6>9 PM</h6><i class="fa-brands fa-cloudflare"></i></div>
                 </div>
                
             </div>
             <div class="upperright">
+                 <div class="text">AIR CONDITIONS</div>
+                 <div class="urm">
+                <div class="upperrightfirst">
+                    <p><i class="fa-solid fa-temperature-low" style="padding:10px;"></i>Real Feel <br>30 deg</p>
+                    <p><i class="fa-solid fa-droplet" style="padding:10px;"></i>Chance of Rain<br>10%</p>
+                </div>
+
+                <div class="upperrightsecond">
+                    <p><i class="fa-solid fa-wind" style="padding:10px;"></i>Wind <br>0.2 Km/Hr</h3></p>
+                    <p><i class="fa-regular fa-sun" style="padding:10px;"></i>UV index <br>3</p>
+                </div>
+                <div class="buttons">
+                        <button>see more</button>
+                </div>
+            </div>
             </div>
         </div>
 
